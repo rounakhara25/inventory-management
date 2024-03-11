@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="inventory.css" />
+  </head>
+  <body>
+    <header><h1>Inventory Management</h1></header>
+    <div class="app">
+      <div class="table">
+        <h2>Weekly Sales</h2>
+        <table id="sales">
+          <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </table>
+      </div>
+      <div class="table">
+        <h2>Product Stock</h2>
+        <table id="product">
+          <tr>
+            <th>Shirts</th>
+            <th>Pants</th>
+            <th>Trousers</th>
+            <th>Shoes</th>
+          </tr>
+          <tr>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+            <td>200</td>
+          </tr>
+        </table>
+      </div>
+      <div class="left-nav">
+        <h2>Check Sales</h2>
+        <form>
+          <select name="days" id="days">
+            <option value="today">Today</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+          </select>
+        </form>
+        <button onclick="getDailySale()">Get Daily Sale</button>
+        <form id="ddlProduct">
+          <select name="productName" id="productName">
+            <option value="0">Shirts</option>
+            <option value="1">Pants</option>
+            <option value="2">Trousers</option>
+            <option value="3">Shoes</option>
+          </select>
+        </form>
+        <button onclick="productTotalSale()">Product Total Sale</button>
+        <!-- <p>---------------- OR ---------------</p> -->
+        <button onclick="productTodaySale()">Product Today Sale</button>
+        <p>Are you want to product?</p>
+        <button onclick="productSell();">Sell</button>
+        <button onclick="productPurchase();">Purchase</button>
+      </div>
+    </div>
+    <script src="inventory.js"></script>
+  </body>
+</html>
